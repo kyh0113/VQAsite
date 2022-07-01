@@ -7,3 +7,4 @@ please fork it and follow the instruction to get pair's code dynamically
 이 스프린트는 제출할 필요는 없습니다.
 
 수정 테스트3
+수정합니다!
