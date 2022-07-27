@@ -1,0 +1,24 @@
+{% extends "photo/layout.html" %}
+{% block photo %}
+    <ul>
+    <a href="{% url 'user:login' %}">로그인</a>
+    <a href="{% url 'photo:photo_upload' %}">사진 업로드</a>
+    <br>
+    <br>
+    {% block extra_head %}
+    <style>
+        .post_photo{
+            max-width: 40%;
+        }
+    </style>
+    {% endblock %}
+
+    {% for photo in photo_list %}
+    <li>
+        <a href="{% url "photo:photo_detail" photo.pk %}">
+            <img src="{{ photo.photo.url }}"  class="post_photo" />
+        </a>
+    </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

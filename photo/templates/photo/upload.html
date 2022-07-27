@@ -1,0 +1,10 @@
+사진 업로드
+<br>
+<form action="" method="post" enctype="multipart/form-data">
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type="submit" value="Upload">
+    <br>
+    <br>
+    <a href="{% url "photo:photo_view" %}">목록으로</a>
+</form>

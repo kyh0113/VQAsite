@@ -1,0 +1,27 @@
+{% extends "photo/layout.html" %}
+<html>
+<head>
+    <meta charset="utf-8"/>
+    {% block extra_head %}
+    <style>
+        .post_photo{
+            max-width: 40%;
+        }
+    </style>
+    {% endblock %}
+</head>
+<body>
+    {% block photo %}
+        {% if photo.photo %}
+            <img src="{{ photo.photo.url }}" class="post_photo" />
+        {% endif %}
+    <br>
+
+    <div class="panel-footer">
+        <a href="{% url "photo:photo_view" %}">목록으로</a>
+        <a href="{% url "QnA:question_view" photo.pk %}">질문입력</a>
+    </div>
+    {% endblock %}
+
+</body>
+</html>
